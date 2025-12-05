@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netural Beauty</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style1.css">
+
+</head>
+
+<body class="bg-white">
+  <!-- Navbar -->
+  <header class="bg-blue-100">
+    <nav class=" flex items-center justify-between p-2 max-w-7xl mx-auto px-4 md:px-6 py-2">
+      <div
+        class=" w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-600 to-blue-200 flex items-center justify-center font-bold shadow-[0_6px_18px_rgba(15,23,42,0.08)] text-cyan-100">
+        NB</div>
+      <!-- Desktop Menu -->
+      <div id="desktopMenu" class="hidden md:flex space-x-4">
+        <a href="#" class=" py-1 px-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg ">Home</a>
+        <a href="#" class=" py-1 px-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Skin type</a>
+        <a href="#" class=" py-1 px-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Category of
+          Products</a>
+        <a href="#" class=" py-1 px-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Add to Cart</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="openMenu" class="p-2 rounded text-blue-600 hover:bg-indigo-700 hover:text-white md:hidden">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="p-1 flex-1 min-w-20 md:min-w-24 max-w-md">
+        <div class="max-w-md">
+          <div>
+
+            <div class="">
+              <div class="flex items-center gap-2 rounded-lg border border-gray-300 px-3 py-2 bg-white shadow-sm ">
+                <input id="search" type="text" name="search" class="flex-1 outline-none text-sm"
+                  placeholder="Search..." />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Login -->
+      <div class="flex gap-2">
+        <a href="#"
+          class=" px-3 py-1 bg-indigo-600 text-white font-semibold rounded-lg shadow hover:bg-indigo-700 transition">Log
+          In
+        </a>
+        <a href="#"
+          class=" py-1 px-3 rounded-lg font-bold bg-transparent border-2 border-indigo-700 text-blue-600 hover:bg-indigo-700 hover:text-white">Register
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed inset-0 bg-blue-100 p-6 hidden z-50 overflow-y-auto w-1/3">
+    <div class="flex justify-between items-center mb-6">
+      <span class="font-semibold text-lg text-black"> Natural Beauty</span>
+      <button id="closeMenu" class="p-2 rounded text-blue-600 hover:bg-indigo-700 hover:text-white">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2">
+          <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="space-y-4">
+      <a href="#" class="block p-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Home</a>
+      <a href="#" class="block p-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Skin Type</a>
+      <a href="#" class="block p-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Category of Products
+      </a>
+      <a href="#" class="block p-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Add to Cart</a>
+      <a href="#" class="block p-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Log in</a>
+      <a href="#" class="block p-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Register</a>
+    </nav>
+  </div>
+  <div class="relative bg-white overflow-hidden">
+    <!-- Background SVG -->
+    <div class="absolute inset-0">
+      <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <pattern id="grid-pattern" width="200" height="200" patternUnits="userSpaceOnUse">
+            <path d="M0 0 L200 0 L200 200 L0 200 Z" fill="none" stroke="#A1BC98" stroke-width="1" />
+            <path d="M0 200 L200 0" fill="none" stroke="#A1BC98" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+      </svg>
+    </div>
+
+    <!-- Hero Content -->
+    <div
+      class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 md:p-10 md:w-full py-10 lg:p-10 flex flex-col-reverse lg:flex-row-reverse items-center lg:justify-between gap-20 sm:py-20">
+      <!-- Text Content -->
+      <div class="max-w-2xl space-y-6">
+        <h1 class="text-4xl lg:text-5xl font-bold text-gray-900">
+          Natural Beauty!
+        </h1>
+        <p class="text-lg text-gray-600">
+          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
+          fugiat veniam occaecat.
+        </p>
+
+        <div class="flex flex-wrap gap-4 mt-6">
+          <a id="GetStart" href="#"
+            class="inline-block px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow hover:bg-indigo-700 transition">
+            Get started
+          </a>
+          <a href="#" class="inline-block px-6 py-3 text-indigo-600 font-semibold rounded-lg hover:underline">
+            Learn more →
+          </a>
+        </div>
+      </div>
+      <!-- Image Content -->
+      <div class="flex-1 max-w-xl lg:max-w-2xl">
+        <img src="./image/skincareProduct.jpg" alt="App screenshot" class="w-full rounded-xl shadow-xl">
+      </div>
+    </div>
+  </div>
+
+
+  <div id="AboutUs" class="mx-auto max-w-7xl px-6 py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900">Our team</h2>
+      <p class="mt-4 text-lg text-gray-600">
+        Welcome to our skincare space, where science meets simplicity. We started with one goal: to make skincare
+        easier, safer, and kinder for everyone. Every formula is created with dermatologist-approved ingredients,
+        balanced for daily use, and designed to solve real skin concerns — not just cover them.
+
+        Whether you have dry, oily, combination, or sensitive skin, we’re here to help you feel confident in your
+        natural glow. Your skin deserves care made with honesty, transparency, and love — and that’s what we deliver
+        every day.
+      </p>
+    </div>
+
+    <ul role="list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10">
+      <!-- Person -->
+      <li class="text-center">
+        <img src="./image/Yun Eychhean.jpg" alt="" class="mx-auto h-40 w-40 rounded-full object-cover" />
+        <h3 class="mt-6 text-xl font-semibold text-gray-900">Yun Eychhean</h3>
+        <p class="text-sm text-indigo-600 mt-1">Junior Web Designer</p>
+        <p class="mt-3 text-sm text-gray-600">
+          A web designer creates visually appealing and user-friendly website layouts by combining creativity with
+          technical skill. They focus on typography, color, layout, and responsive design to ensure websites look great
+          on all devices. Web designers collaborate with developers, clients, and content creators to bring ideas to
+          life and improve overall user experience.
+        </p>
+
+        <ul class="flex justify-center space-x-4 mt-4  ">
+          <li>
+            <a href="#"
+              class="text-white hover:bg-blue-700 flex items-center space-x-1 bg-blue-600 py-1 px-3 rounded-lg">
+              <span>X</span>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              class="text-white hover:bg-blue-700 flex items-center space-x-1 bg-blue-600 py-1 px-3 rounded-lg">
+              <span>LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Copy this <li> for other team members -->
+      <li class="text-center">
+        <img src="./image/Yann SokMeng.jpg" alt="" class="mx-auto h-40 w-40 rounded-full object-cover" />
+        <h3 class="mt-6 text-xl font-semibold text-gray-900">Yann Sokmeng</h3>
+        <p class="text-sm text-indigo-600 mt-1">Junior Web designer</p>
+        <p class="mt-3 text-sm text-gray-600">
+          A web designer creates visually appealing and user-friendly website layouts by combining creativity with
+          technical skill. They focus on typography, color, layout, and responsive design to ensure websites look great
+          on all devices. Web designers collaborate with developers, clients, and content creators to bring ideas to
+          life and improve overall user experience.
+        </p>
+
+        <ul class="flex justify-center space-x-4 mt-4">
+          <li><a href="#"
+              class="text-white hover:bg-blue-700 flex items-center space-x-1 bg-blue-600 py-1 px-3 rounded-lg">X</a>
+          </li>
+          <li><a href="#"
+              class="text-white hover:bg-blue-700 flex items-center space-x-1 bg-blue-600 py-1 px-3 rounded-lg">LinkedIn</a>
+          </li>
+        </ul>
+      </li>
+      </li>
+    </ul>
+  </div>
+
+  <!--skin product-->
+  <section class="py-8 pt-8 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex justify-between items-center py-3 mx-auto">
+        <h2 class="text-black font-bold text-2xl">Shop by Category</h2>
+        <a href="#" class="text-blue-600 text-sm hover:text-blue-700 hover:underline">
+          Browse all categories
+          <span aria-hidden="true"> →</span>
+        </a>
+      </div>
+      <div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 lg:grid-rows-2 gap-6">
+
+
+        <!-- Category 1 -->
+        <div class="relative group overflow-hidden rounded-xl grid row-span-2">
+          <img src="./image/Beauty of Joseon 🤍✨.jpg" alt="New Arrivals"
+            class="w-full h-64 sm:h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <h3 class="text-xl font-bold mb-1">New Arrivals</h3>
+            <p class="text-sm">Shop now</p>
+          </div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="relative group overflow-hidden rounded-xl">
+          <img src="./image/The Ultimate Skincare Routine for Glowing Skin.jpg" alt="Accessories"
+            class="w-full h-64 lg:h-[40vh] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <h3 class="text-xl font-bold mb-1">Accessories</h3>
+            <p class="text-sm">Shop now</p>
+          </div>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="relative group overflow-hidden rounded-xl">
+          <img src="./image/korean skincare 💆🏻_♀️.jpg" alt="Workspace"
+            class="w-full h-64 lg:h-[40vh] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <h3 class="text-xl font-bold mb-1">Workspace</h3>
+            <p class="text-sm">Shop now</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+     <div class=" flex justify-center items-center bottom-0 left-0 w-full px-8 py-6">
+      <a href="#"
+        class="inline-block rounded-lg bg-indigo-600 text-white px-6 py-3 font-semibold hover:bg-indigo-700 transition">
+        Go to Store
+      </a>
+    </div>
+  </section>
+
+  <!--skin type-->
+  <section class="relative w-full h-[500px]">
+    <img src="./image/Beauty of Joseon 🤍✨.jpg" class="w-full h-full object-cover" />
+
+    <!-- Text overlay on top -->
+    <div class="absolute inset-0 flex flex-col items-center px-8 py-10 text-white">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
+        Category of Skincare
+      </h2>
+
+      <p class="max-w-xl mb-6">
+        Skincare products are usually grouped into several main categories based on their purpose. Each category targets
+        a different skin need, from cleansing to moisturizing and protecting the skin.
+      </p>
+    </div>
+
+    <!-- Button at the bottom -->
+    <div class="absolute bottom-0 left-0 w-full px-8 py-6 bg-black/40">
+      <a href="#"
+        class="inline-block rounded-lg bg-indigo-600 text-white px-6 py-3 font-semibold hover:bg-indigo-700 transition">
+        Go to Store
+      </a>
+    </div>
+  </section>
+
+
+  <script src="homeJavascrit.js"></script>
+</body>
+
+</html>
