@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Navbar Fixed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style1.css">
+    
+  </head>
+
+  <body class="bg-white">
+    <!-- Navbar -->
+    <header class="bg-blue-100">
+      <nav class=" flex items-center justify-between p-2 max-w-7xl mx-auto px-4 md:px-6 py-2">
+        <div class=" w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-600 to-blue-200 flex items-center justify-center font-bold shadow-[0_6px_18px_rgba(15,23,42,0.08)] text-cyan-100">
+            NB</div>
+        <!-- Desktop Menu -->
+        <div id="desktopMenu" class="hidden md:flex space-x-6">
+          <a href="#" class="text-gray-700 hover:text-[#B87C4C] hover:bg-[#D2DCB6] hover:p-1 rounded-xl ">Product</a>
+          <a href="#" class="text-gray-700 hover:text-[#B87C4C] hover:bg-[#D2DCB6] hover:p-1 rounded-xl">Features</a>
+          <a href="#" class="text-gray-700 hover:text-[#B87C4C] hover:bg-[#D2DCB6] hover:p-1 rounded-xl"
+            >Marketplace</a
+          >
+          <a href="#" class="text-gray-700 hover:text-[#B87C4C] hover:bg-[#D2DCB6] hover:p-1 rounded-xl">Company</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button
+          id="openMenu"
+          class="p-2 rounded text-gray-700 hover:bg-[#D2DCB6] md:hidden"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            stroke="currentColor"
+            fill="none"
+            stroke-width="2"
+          >
+            <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="p-1 flex-1 min-w-24 md:min-w-48 max-w-md">
+          <div class="max-w-md">
+            <div>
+             
+              <div class="">
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-300 px-3 py-2 bg-white shadow-sm"
+                >
+                  <input
+                    id="search"
+                    type="text"
+                    name="search"
+                    class="flex-1 outline-none text-sm"
+                    placeholder="Search..."
+                  />
+
+                  <div class="text-gray-500">
+                    <div class="w-7">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPcAAADMCAMAAACY78UPAAAAhFBMVEX///8AAAD8/PwEBAT5+fkICAj29vbz8/Pr6+vg4ODv7+/o6Oi7u7vY2Ng8PDwuLi6ampqUlJRVVVVjY2OEhIQXFxfBwcHMzMwmJiZaWloaGhqkpKSxsbGLi4tKSkp8fHxxcXFBQUEyMjKgoKAfHx/KysrAwMBra2tHR0dPT0+0tLR+fn5oNZF4AAAKb0lEQVR4nO1diXbaOhCV5A2vmMVAYhOWQAnk///vaUYLJpi8JFZPBdFtw9KCj65nNIs0mhDi4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4PCbwNQzY/Caffrhh4Ev2TLgC68Z85E8PD0wWIeImbwNDwygFw7S+Z+mLkejsq5P+3wQMvLw+h6flpOioi14w/GqzsN/PTDzYDCr4TE9rYb0Fp7qnH/W9x/G1HHDBWSi0+Q2aUQ1rmNCHmauo6GOyw3qNP7tgOfhvy+muU8ehDenna4qeouxJi5+6GH+CIoODOJpi94ntJU2TO6eOfOZH9XbC4Kg0qDV3gVrr/32+T2FrzLUlXsEH3n+hFzPrLtErqQtXvIXm4yIuO5O4Y84leAsTPni+e0whaDldTRdH4fnW6Jkz1+tEwhp75R5PBGWuqXF1fH9lCe+ZsQnQpyNnhYXUyHgny9md6flKvOYb5SQ5Xyujq95JD9C2s9+fJrsQDW0p/Porr47XYfx+iQLzrMaJFhN8894xOVW3SSpHlNG7sqZY6jJSm2qUM+LGiR9OwznX0qyMb1wdTDJ70nb2QfalA5HEcj6dpLNME4Lm422cGjdBncmcPaKs1XhkIuw+yYHXIGAOH6wbDl1HsOEdzTD+fDrtmseZt/5dv6Gvk/etEnos7sxb6xp++R1/J1h+yQanb15QKcwNe5D2dleumM048vwO/EHA3BPIOXN1aUk/n3QJoOhNmmU1t/MqBkY8L1K1Tn7ICP3MMm543kCwgHq6vNMhjFfhrhH8YtSdI9WMbPfmXF/9KqyLv60/5mkGIk3oOpC2Q+J9YrOBzjfoagw6Mp+mEnzy8TDc+BWW6/nXCPHKkbzaPPTxTL41nyhQ/Xn3PQ4zaOkMg3x6Ait84+uAjbhD9WB28TwII0CGQ6q82D7mWHGRmLCwOPM5nVWGNdSJ9uLb4UrXeCOQQX5L6G1wQuOKn/W+dS3gtOu66FtC+RyY2MrbTEnpzqPXIU9nS5sNtTSpnt0HBkapXnwTDJeqCSsyvsKCDaIo7Fab6OZtQLnU3Akw9OAlmYGOdfZ7Nha3tzg7lQysYsMhRoTncNb7MNnOpsozWx5MDILVPCytFTefFRrlXYPU1NXhRkur+nbyZuw9FnxXpoaIiOZWriB2MVOqCFSb2/qkowMCmUzpqYuahaMvKtYbWzKqoENnyreL5a68OhNybs0dk0fXZkIVwNLLfpcl+vkxjawfcbCoZQ3j1WtRKNoLwzW5vCobYV5Lf9ZGbqmYejY3GC2DD67UVuLRzs9+FHxNrosxEiu9lMXKbGwAiRUq8d0b1DN+U+k7AY3bBbunKSVTBqfY8NSKZR/zOxbT0Z1FMS3iWHeB2UwawvVHJMSFMub6bG9K95LG3mfFO+J6cGVivfKRt6NMudr09anUQbzYPKqplAreb8Tw2LJFG/rltGBpuZtPG86KT23mLf3q3gD80bJ23gYrS3HwT6zhrxFeGHc+uhimbV9vAls4+EKMh0Tw3ZtpORt5YrLXM3vjW+4gHql7Hlpo7zzQIplMTAs76Pi3cCejMkrm0CyUCUpudnBMX0ex84V1UIN72T2ugNVzGY80TODg1JHg+kDlK7N5PY/LRIbaZ/ThxdzATpcZtRev7KQuNodozQxd1Emqh4QIxvNGsHKKzHAzNzwGIkDVa06s3GZiZBQCsYzmCfz6X1Sx5AWxjYbjYLxCS7XwYapqRVfn/hilQnqo6xbXEMwuaMjq3BMXTTXtQS1mUuaR7RRvMe+ofPcPlmqa9LYzCWNg8nyFpiMxiKrVB+re7JztwRNr9RIzMn6+hxhu3VQYG7uGAaM80WXr8371xfC4aNIBf302WBQYBbC54iT3Fwr+85wBtX2I33SZGrfXokEFzhs/QfCCp16+3A+UcCYi/q1RWxlzIJgcH5KyadI+6o5V/Q1HDqQi3bM1nomQLLBw7yANQisxxznNF+l6/boLra4DhuQqZjNw7KMHsrJQ5ZKuW5axHafpvL9sZyQAZTm9jnV6idjHf9RuplZW58qsFeD9egx7aOcbKWnDC7U1jbTZqoEXTiz5KetxhieXGjJWxwOlrGQfXcAuhEdzyeBJz62GfuutkMzD32O+izyt5k4RmkfbXQ2+0CNmGfi4U/kzbWk/kAb3zw3NsoagNI4O3E46/cD44bSplfM+dtVZGmDOji/ruqx0fO+/ODABY9XwKa1e73gOz59CkuLNbGbQfKkbBG4XihO/vLRddCXfEIvetlcYNGIdgkW6rvP4qIlrOqVfe3UGxOtak7FNds2prZ2APCJOPmljuxzXWdfia4xhUtXrSndIe9ABG9/n8X3gbq6PRt1boiXX1kL5Xcmaopuuq174dFhY6XA0ajnhTr0jzS29Req5v39uNW2ht+ujg59eJwsWNrbAiDeXDYYK14H4o5Ay1QVfsgHfBc2OiAXAV81Hxz04eIPeIpVK1a7wMeUaLMsn4P1bND6f2nshMEL50sQbtCaHOABSR3QDsMOzVEaO48I81A6WmreSvDFe5aC9VLjxYGH6X50DC7sGITjqdgNfaPXvOEfKmgU8g8JdoNhYw7VmsprTdtgPK1nMTaLZWESz5ql7EIWnO8S/ymjUMwFbGZ2Pcn54yG10K77mDzFa9mXSjVhOzOodruqLV99g+D5OCcyleMPo0B/vf15j+6yXisbfxPRqaD6TO//AMlhx7KyfRCL63pBL2aBRgAftG/dDfuuxNPqf1xymzd8bp1fkvFJPP7Ye1JhbWkMQ6Syd4XaHbz543jui+zmfAHu45a3LrGd/0Nut4DOissjn/5Pj2CF6rAnH/vBMx8kOhteWzdpAe0UuFgZSss3tEXehc4LU6c1uJjG/o3cjWvNk/7GB6xTS5NyRDSfLpQ6a/PdolEdsk8OpnCXlrxf9CRtocgt9OQI2Wwvrw/bjnHT7aGcQzhzew8VZ3xW3TKQtZ0ZOSHq1zhAu9RyNXkphguObfEyWY/+5Ak2lyPkk8HjNmE+7iIdiOjORqCBE38wMo0GaRrHcZpEYmKq7os39VXE82Tw3kVcR/OPCn7bmooGgdcREVQNxguPSB61BXS9IzEFXY+IzYa9F8Cur85xfIu3ByGPrcFbX2BJPyuDa4ljZM+T8vAxFZ2gicvfzgatJW+OaWSrQzOCZK23Cy9k7tGnvH9FkbUAXa86Y1aPbjNLU3IDgJWYeVeqg7di9JBzHIArUINDF3G065ZuohlCWN5a0Vjs7dwmNwT2Z3drKef0qJ6cYKVXMukiDkt01qamvYGZSlh2itsz33XAGjC5Rn9t18GPB7aWqxsCg1+J43nBVcDet4+p1WCwPRFd1T4BXv/12P4yoFKsGV6XP1l7HMUExByPSP5yJXI7D9GaglrA8qd6NULunVl7PsEwmq1YjZBiXz6sH7uEWGzVexDjwe+gDTM9WuOvk8DV1Qf33hdgJDuKtGSZsPBx4/MORPvX5ShLH3qt6RP8OtbM1gL1vwzJ+vcRt7XOx8HBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwaE//gOMaFqv2dEY0AAAAABJRU5ErkJggg==" alt="">    
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Login -->
+        <div class="flex gap-2">
+          <a
+            href="#"
+            class="inline-block px-4 py-2 bg-indigo-600 text-white font-semibold rounded-lg shadow hover:bg-indigo-700 transition"
+            >Log In
+          </a>
+          <a
+            href="#"
+            class=" py-2 px-4 rounded-2xl font-bold bg-transparent border-2 border-indigo-700 text-blue-600"
+            >Register
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-[#F1F3E0] p-6 hidden z-50 overflow-y-auto w-1/3">
+      <div class="flex justify-between items-center mb-6">
+        <span class="font-semibold text-lg"> Natural Beauty</span>
+        <button id="closeMenu" class="p-2 rounded hover:bg-[#A1BC98]">
+          <svg
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            stroke="currentColor"
+            fill="none"
+            stroke-width="2"
+          >
+            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="space-y-4">
+        <a
+          href="#"
+          class="block text-gray-700 text-lg hover:text-white hover:bg-[#A1BC98]  hover:p-1 rounded-xl"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="block text-gray-700 text-lg hover:text-white hover:bg-[#A1BC98] hover:p-1 rounded-xl"
+          >Skin Type</a
+        >
+        <a
+          href="#"
+          class="block text-gray-700 text-lg hover:text-white hover:bg-[#A1BC98] hover:p-1 rounded-xl"
+          >Category of Products </a
+        >
+        <a
+          href="#"
+          class="block text-gray-700 text-lg hover:text-white hover:bg-[#A1BC98] hover:p-1 rounded-xl"
+          >Add to Cart</a
+        >
+        <a
+          href="#"
+          class="block text-gray-700 text-lg hover:text-white pt-4 hover:bg-[#A1BC98] hover:p-1 rounded-xl"
+          >Log in</a
+        >
+        <a
+          href="#"
+          class="block text-gray-700 text-lg hover:text-white hover:bg-[#A1BC98] hover:p-1 rounded-xl"
+          >Register</a
+        >
+      </nav>
+    </div>
+    <div class="relative bg-white overflow-hidden">
+      <!-- Background SVG -->
+      <div class="absolute inset-0">
+        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <pattern id="grid-pattern" width="200" height="200" patternUnits="userSpaceOnUse">
+              <path d="M0 0 L200 0 L200 200 L0 200 Z" fill="none" stroke="#A1BC98" stroke-width="1"/>
+              <path d="M0 200 L200 0" fill="none" stroke="#A1BC98" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+        </svg>
+      </div>
+      
+      <!-- Hero Content -->
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 md:p-10 md:w-full py-10 lg:p-10 flex flex-col-reverse lg:flex-row-reverse items-center lg:justify-between gap-20 sm:py-20">
+        <!-- Text Content -->
+        <div class="max-w-2xl space-y-6">
+          <h1 class="text-4xl lg:text-5xl font-bold text-gray-900">
+            Natural Beauty!
+          </h1>
+          <p class="text-lg text-gray-600">
+            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.
+          </p>
+
+          <div class="flex flex-wrap gap-4 mt-6">
+            <a href="#" class="inline-block px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow hover:bg-indigo-700 transition">
+              Get started
+            </a>
+            <a href="#" class="inline-block px-6 py-3 text-indigo-600 font-semibold rounded-lg hover:underline">
+              Learn more →
+            </a>
+          </div>
+        </div>
+        <!-- Image Content -->
+        <div class="flex-1 max-w-xl lg:max-w-2xl">
+          <img src="skincareProduct.jpg" alt="App screenshot" class="w-full rounded-xl shadow-xl">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- JS for menu -->
+    <script>
+      const mobileMenu = document.getElementById("mobileMenu");
+      const openBtn = document.getElementById("openMenu");
+      const closeBtn = document.getElementById("closeMenu");
+
+      openBtn.onclick = () => mobileMenu.classList.remove("hidden");
+      closeBtn.onclick = () => mobileMenu.classList.add("hidden");
+    </script>
+  </body>
+</html>
