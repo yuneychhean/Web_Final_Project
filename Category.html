@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natural Beauty | Categories</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+<!-- NAVBAR -->
+<header class="bg-blue-100 sticky top-0 z-40">
+  <nav class="max-w-7xl mx-auto px-4 py-2 flex items-center gap-3">
+    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-600 to-blue-300 flex items-center justify-center font-bold text-white">
+      NB
+    </div>
+    <div class="hidden md:flex gap-4">
+      <a href="#" class="text-blue-700 hover:underline">Home</a>
+      <a href="#" class="text-blue-700 hover:underline">Products</a>
+      <a href="#" class="text-blue-700 hover:underline">Cart</a>
+    </div>
+    <div class="flex-1">
+      <input type="text" placeholder="Search products..." class="w-full max-w-md px-3 py-2 border rounded-lg text-sm outline-none">
+    </div>
+    <button id="menuBtn" class="md:hidden text-blue-700">☰</button>
+  </nav>
+  <div id="mobileMenu" class="hidden bg-blue-100 p-4 md:hidden">
+    <a class="block py-2 text-blue-700" href="#">Home</a>
+    <a class="block py-2 text-blue-700" href="#">Products</a>
+    <a class="block py-2 text-blue-700" href="#">Cart</a>
+  </div>
+</header>
+
+<!-- PAGE TITLE -->
+<section class="max-w-7xl mx-auto px-4 py-6">
+  <h1 class="text-3xl font-bold">Category of Products</h1>
+</section>
+
+<!-- CATEGORIES -->
+<section class="max-w-7xl mx-auto px-4 pb-12 space-y-10">
+
+  <!-- Cleanser -->
+  <div>
+    <div class="flex justify-between items-center mb-3">
+      <h2 class="text-xl font-semibold">Cleanser</h2>
+      <a href="#" class="text-blue-600 text-sm hover:underline">View more →</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Foam Cleanser</h3>
+        <p class="text-sm text-gray-600 mt-1">Gentle cleanse</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$12.50</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Gel Cleanser</h3>
+        <p class="text-sm text-gray-600 mt-1">Refresh & clean</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$14.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Oil Cleanser</h3>
+        <p class="text-sm text-gray-600 mt-1">Deep cleanse</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$15.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Cream Cleanser</h3>
+        <p class="text-sm text-gray-600 mt-1">Soft cleanse</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$16.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toner & Essence -->
+  <div>
+    <div class="flex justify-between items-center mb-3">
+      <h2 class="text-xl font-semibold">Toner & Essence</h2>
+      <a href="#" class="text-blue-600 text-sm hover:underline">View more →</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Hydrating Toner</h3>
+        <p class="text-sm text-gray-600 mt-1">Refresh & soothe</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$13.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Essence</h3>
+        <p class="text-sm text-gray-600 mt-1">Calm & brighten</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$20.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Soothing Toner</h3>
+        <p class="text-sm text-gray-600 mt-1">Calm & prep</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$18.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Rice Toner</h3>
+        <p class="text-sm text-gray-600 mt-1">Brighten & smooth</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$19.50</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Serum & Treatment -->
+  <div>
+    <div class="flex justify-between items-center mb-3">
+      <h2 class="text-xl font-semibold">Serum & Treatment</h2>
+      <a href="#" class="text-blue-600 text-sm hover:underline">View more →</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Vitamin C</h3>
+        <p class="text-sm text-gray-600 mt-1">Brightening</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$22.50</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Niacinamide</h3>
+        <p class="text-sm text-gray-600 mt-1">Even skin tone</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$21.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Retinol</h3>
+        <p class="text-sm text-gray-600 mt-1">Anti-aging</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$24.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Peptide</h3>
+        <p class="text-sm text-gray-600 mt-1">Firm & repair</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$26.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Moisturizer -->
+  <div>
+    <div class="flex justify-between items-center mb-3">
+      <h2 class="text-xl font-semibold">Moisturizer</h2>
+      <a href="#" class="text-blue-600 text-sm hover:underline">View more →</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Cream</h3>
+        <p class="text-sm text-gray-600 mt-1">Rich hydration</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$18.50</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Gel</h3>
+        <p class="text-sm text-gray-600 mt-1">Lightweight</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$17.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Lotion</h3>
+        <p class="text-sm text-gray-600 mt-1">Daily care</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$16.50</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Barrier Cream</h3>
+        <p class="text-sm text-gray-600 mt-1">Protect & soothe</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$20.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sunscreen -->
+  <div>
+    <div class="flex justify-between items-center mb-3">
+      <h2 class="text-xl font-semibold">Sunscreen</h2>
+      <a href="#" class="text-blue-600 text-sm hover:underline">View more →</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">SPF 50</h3>
+        <p class="text-sm text-gray-600 mt-1">Strong protection</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$15.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Mineral SPF</h3>
+        <p class="text-sm text-gray-600 mt-1">Gentle sun care</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$16.50</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Chemical SPF</h3>
+        <p class="text-sm text-gray-600 mt-1">Light & effective</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$14.50</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Stick SPF</h3>
+        <p class="text-sm text-gray-600 mt-1">On-the-go care</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$17.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Eye Care -->
+  <div>
+    <div class="flex justify-between items-center mb-3">
+      <h2 class="text-xl font-semibold">Eye Care</h2>
+      <a href="#" class="text-blue-600 text-sm hover:underline">View more →</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Eye Cream</h3>
+        <p class="text-sm text-gray-600 mt-1">Hydrate & firm</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$22.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Eye Serum</h3>
+        <p class="text-sm text-gray-600 mt-1">Brighten & refresh</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$25.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Eye Patch</h3>
+        <p class="text-sm text-gray-600 mt-1">Depuff & soothe</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$18.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Cooling Gel</h3>
+        <p class="text-sm text-gray-600 mt-1">Refresh tired eyes</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$20.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Masks & Exfoliators -->
+  <div>
+    <div class="flex justify-between items-center mb-3">
+      <h2 class="text-xl font-semibold">Masks & Exfoliators</h2>
+      <a href="#" class="text-blue-600 text-sm hover:underline">View more →</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Clay Mask</h3>
+        <p class="text-sm text-gray-600 mt-1">Deep cleanse</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$14.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Sheet Mask</h3>
+        <p class="text-sm text-gray-600 mt-1">Hydrate & nourish</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$16.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Scrub</h3>
+        <p class="text-sm text-gray-600 mt-1">Exfoliate dead skin</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$13.50</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-md transition">
+        <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover rounded-lg">
+        <h3 class="mt-3 text-lg font-semibold text-gray-900">Peel</h3>
+        <p class="text-sm text-gray-600 mt-1">Brighten skin</p>
+        <p class="text-xl font-bold text-indigo-600 mt-2">$18.00</p>
+        <div class="flex gap-2 mt-4">
+          <button class="flex-1 px-3 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">Add to Cart</button>
+          <button class="flex-1 px-3 py-2 border-2 border-indigo-600 text-indigo-600 text-sm font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition">View Item</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+const btn = document.getElementById("menuBtn")
+const menu = document.getElementById("mobileMenu")
+btn.onclick = () => menu.classList.toggle("hidden")
+</script>
+
+</body>
+</html>
