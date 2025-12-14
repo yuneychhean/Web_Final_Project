@@ -1,0 +1,692 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typeskin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="./image/Skincare Logo in Blue and Grey.png">
+
+</head>
+
+<body>
+    <header class="bg-blue-100">
+        <nav class=" flex items-center justify-between p-2 max-w-7xl mx-auto px-4 md:px-6 py-2">
+            <div
+                class=" w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-600 to-blue-200 flex items-center justify-center font-bold shadow-[0_6px_18px_rgba(15,23,42,0.08)] text-cyan-100">
+                NB</div>
+            <!-- Desktop Menu -->
+            <div id="desktopMenu" class="hidden md:flex space-x-4">
+                <a href="./Home.html"
+                    class=" py-1 px-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg ">Home</a>
+                <a href="Typeskin.html"
+                    class=" py-1 px-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Skin
+                    type</a>
+                <a href="./Categoryskincare.html"
+                    class=" py-1 px-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Category of
+                    Products</a>
+                <a href="./Addtocart.html"
+                    class=" py-1 px-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Add to
+                    Cart</a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="openMenu" class="p-2 rounded text-blue-600 hover:bg-indigo-700 hover:text-white md:hidden">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2">
+                    <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round" />
+                </svg>
+            </button>
+            <div class="p-1 flex-1 min-w-20 md:min-w-24 max-w-md">
+                <div class="max-w-md">
+                    <div>
+
+                        <div class="">
+                            <div
+                                class="flex items-center gap-2 rounded-lg border border-gray-300 px-3 py-2 bg-white shadow-sm ">
+                                <input id="search" type="text" name="search" class="flex-1 outline-none text-sm"
+                                    placeholder="Search..." />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Login -->
+            <div class="flex gap-2">
+                <a href="./Login.html"
+                    class=" Loginbtn px-3 py-1 bg-indigo-600 text-white font-semibold rounded-lg shadow hover:bg-indigo-700 transition">Log
+                    In
+                </a>
+                <a href="./Login.html"
+                    class="Registerbtn py-1 px-3 rounded-lg font-bold bg-transparent border-2 border-indigo-700 text-blue-600 hover:bg-indigo-700 hover:text-white">Register
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-blue-100 p-6 hidden z-50 overflow-y-auto w-1/3">
+        <div class="flex justify-between items-center mb-6">
+            <span class="font-semibold text-lg text-black"> Natural Beauty</span>
+            <button id="closeMenu" class="p-2 rounded text-blue-600 hover:bg-indigo-700 hover:text-white">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2">
+                    <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+        <nav class="space-y-4">
+            <a href="./Home.html"
+                class="block p-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Home</a>
+            <a href="./Typeskin.html"
+                class="block p-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Skin Type</a>
+            <a href="./Categoryskincare.html"
+                class="block p-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Category of
+                Products
+            </a>
+            <a href="./Addtocart.html"
+                class="block p-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Add to Cart</a>
+            <a href="./Login.html"
+                class=" Loginbtn block p-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Log
+                in</a>
+            <a href="./Register.html"
+                class="Registerbtn block p-1 text-blue-600 hover:bg-indigo-700 hover:text-white rounded-lg">Register</a>
+        </nav>
+    </div>
+
+
+    <!-- Header placeholder -->
+
+    <div class="max-w-7xl mx-auto px-6 py-20">
+        <div class="grid lg:grid-cols-2 gap-12 justify-center items-center">
+
+            <!-- Left Side Text -->
+            <div>
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                    Find Your Skin Type
+                </h1>
+                <p class="text-gray-600 leading-relaxed">
+                    Several criteria are used to classify the different types of skin. For example, Fitzpatrick's
+                    classification, first described in 1975, is based on skin color and its response to sun exposure. It
+                    is used to determine the proper type of sun protection factor or to predict the risk of skin cancer,
+                    among others. However, from a cosmetic point of view, skin is classified according to several
+                    factors related to its balance: sebaceous secretion, hydration and sensitivity level. Thus, each
+                    type of skin will have its own characteristics and require different cares. The type of skin is
+                    determined by genetics, although it will also be affected by other factors and can change with time.
+                    Based on these characteristics, there are five types of healthy skin: normal, dry, oily, combination
+                    (both oily and dry skin) and sensitive. Below, we describe the main characteristics of each type of
+                    skin.
+                </p>
+            </div>
+
+            <!-- Right Side Image Grid -->
+            <div class="grid grid-cols-2 grid-rows-3 gap-4">
+
+                <!-- Large Left Image (Tall) -->
+                <div class="row-span-3 relative group rounded-2xl overflow-hidden shadow-lg">
+                    <img src="./image/Acne en mee-eters_ groene thee kan helpen.jpg"
+                        class="w-full h-full object-cover transition duration-300 group-hover:scale-105" />
+                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h3 class="text-2xl font-semibold">Acne Skin</h3>
+                        <p class="text-sm opacity-80">Go now</p>
+                    </div>
+                </div>
+
+                <!-- Top Right -->
+                <div class="relative group rounded-2xl overflow-hidden shadow-lg">
+                    <img src="./image/Best Winter Moisturizer In India for Every Skin Type - Bodytales.jpg"
+                        class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" />
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h3 class="text-lg font-semibold">Combination Skin</h3>
+                    </div>
+                </div>
+
+                <!-- Middle Right -->
+                <div class="relative group rounded-2xl overflow-hidden shadow-lg">
+                    <img src="./image/Cuatro cosas que hago para levantarme con buena cara.jpg"
+                        class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" />
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h3 class="text-lg font-semibold">Normal skin</h3>
+                    </div>
+                </div>
+
+                <!-- Bottom Right -->
+                <div class="relative group rounded-2xl overflow-hidden shadow-lg">
+                    <img src="./image/How To Use Turmeric For Acne_.jpg"
+                        class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" />
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h3 class="text-lg font-semibold">Sensitive skin</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 mb-8">
+        <div class="mx-auto max-w-2xl lg:mx-0">
+            <h2 class="text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl"> Our Vision</h2>
+            <p class="mt-2 text-lg/8 text-black/60">To Provide the best choice for user not only customer </p>
+        </div>
+        <div
+            class="mx-auto mt-6 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 border-t border-gray-700 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            <article class="flex max-w-xl flex-col items-start justify-between">
+                <div class="group relative grow">
+                    <h3 class="mt-3 text-lg/6 font-bold text-black/60 group-hover:text-gray-300">
+                        <a href="#">
+                            <span class="absolute inset-0"></span>
+                            Overview of Skin Types
+                        </a>
+                    </h3>
+                    <p class="mt-5 text-sm/6 text-gray-400">Skin types describe how the skin behaves and how much oil it
+                        produces. The main types are normal, dry, oily, combination, and sensitive. Each type has unique
+                        characteristics and needs. Understanding your skin type helps you choose the right products and
+                        create a suitable skincare routine.</p>
+                </div>
+
+            </article>
+            <article class="flex max-w-xl flex-col items-start justify-between">
+
+                <div class="group relative grow">
+                    <h3 class="mt-3 text-lg/6 font-bold text-black/60 group-hover:text-gray-300">
+                        <a href="#">
+                            <span class="absolute inset-0"></span>
+                            Objective of us
+                        </a>
+                    </h3>
+                    <p class="mt-5 line-clamp-5 text-sm/6 text-gray-400">The Skin Type section aims to help users
+                        quickly understand their skin type and choose suitable products. It provides simple explanations
+                        of each skin type, guiding users toward better skincare decisions. This section improves user
+                        confidence, supports informed product selection, and makes the website easier to navigate</p>
+                </div>
+
+            </article>
+            <article class="flex max-w-xl flex-col items-start justify-between">
+
+                <div class="group relative grow">
+                    <h3 class="mt-3 text-lg/6 font-bold text-black/60 group-hover:text-gray-300">
+                        <a href="#">
+                            <span class="absolute inset-0"></span>
+                            Finding Your Skin Type
+                        </a>
+                    </h3>
+                    <p class="mt-5 line-clamp-5 text-sm/6 text-gray-400">
+                        Skin’s oiliness can change over time and may also be influenced by factors such as stress,
+                        genetics, fluctuating hormones, and humidity.
+                        Identifying whether your skin is oily, normal, dry, sensitive, or combination can help you
+                        choose the right products to promote hydrated, smooth, and radiant-looking skin.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <section class="bg-white py-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-16">
+
+                <!-- Left: Text + Image -->
+                <div class="grid md:grid-cols-2 grid-cols-1 justify-between items-center gap-10">
+                    <img src="./image/Best Winter Moisturizer In India for Every Skin Type - Bodytales.jpg" alt=""
+                        class="mt-8 rounded-xl object-cover h-64 sm:h-80 md:h-96 w-full" />
+                    <div>
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                            Combination skin
+                        </h2>
+                        <p class="mt-6 text-lg leading-7 text-gray-600">Combination skin has two or more different skin
+                            characteristics at the same time. The T-zone (forehead, nose, chin) is usually oily with
+                            enlarged pores and shine, while the cheeks range from normal to dry. You may experience
+                            occasional breakouts in oily areas and tightness or flakiness in dry areas. Weather changes,
+                            stress, hormones, and skincare products.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Features List -->
+                <div class=" grid grid-cols-1 sm:grid-cols-3 justify-center items-center gap-4">
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Characteristics
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Mix of oily and dry areas</li>
+                            <li>Usually oily T-zone (forehead, nose, chin)</li>
+                            <li>Normal or dry cheeks</li>
+                        </ul>
+                    </div>
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                How it feels
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Oily in some spots</li>
+                            <li>Dry or normal in others</li>
+                            <li>Avoid harsh exfoliants or scrubs</li>
+                        </ul>
+                    </div>
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Recommended care
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Mix of oily and dry areas</li>
+                            <li>Lightweight moisturizer</li>
+                            <li>Spot treatment for oily areas</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-8">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-16">
+
+                <!-- Left: Text + Image -->
+                <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+
+                    
+                    <img src="./image/Cuatro cosas que hago para levantarme con buena cara.jpg" alt=""
+                        class="w-full rounded-xl object-cover h-64 sm:h-80 md:h-96 order-1 md:order-2">
+
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                            Normal skin
+                        </h2>
+                        <p class="mt-6 text-lg leading-7 text-gray-600">
+                            Normal skin is well-balanced, meaning it is neither too oily nor too dry. It has a smooth
+                            texture,
+                            small or barely visible pores, and an even tone with minimal imperfections. People with
+                            normal skin
+                            usually experience few sensitivities and maintain a healthy moisture balance throughout the
+                            day.
+                            This skin type tends to feel comfortable, soft, and hydrated, showing a natural glow without
+                            excess
+                            shine. Proper care can help maintain its balanced condition and protect it from
+                            environmental changes.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Right: Features List -->
+                <div class=" grid grid-cols-1 sm:grid-cols-3 justify-center items-center gap-4">
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Characteristics
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Balanced moisture and oil levels</li>
+                            <li>Small or barely visible pores</li>
+                            <li>Smooth, even skin texture</li>
+                        </ul>
+                    </div>
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                How it feels
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Comfortable throughout the day</li>
+                            <li>Not oily and not dry</li>
+                            <li>Soft and smooth to the touch</li>
+                        </ul>
+                    </div>
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Recommended care
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Use a gentle cleanser to maintain balance</li>
+                            <li>Apply a lightweight moisturizer daily</li>
+                            <li>Use SPF 30+ every day to protect the skin</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <section class="bg-white py-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-16">
+
+                <!-- Left: Text + Image -->
+                <div class="grid md:grid-cols-2 grid-cols-1 justify-between items-center gap-10">
+                    <img src="./image/How To Use Turmeric For Acne_.jpg" alt=""
+                        class="mt-8 rounded-xl object-cover h-64 sm:h-80 md:h-96 w-full" />
+                    <div>
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                            Sensitive Skin
+                        </h2>
+                        <p class="mt-6 text-lg leading-7 text-gray-600">Sensitive skin is more prone to irritation and reacts easily to environmental factors, harsh products, or changes in weather. It may appear red, itchy, or inflamed, and can feel tight or uncomfortable. This skin type requires gentle care and mild, soothing products to maintain balance and prevent flare-ups. Identifying triggers and following a simple, calming skincare routine can help sensitive skin remain healthy, hydrated, and comfortable.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Features List -->
+                <div class=" grid grid-cols-1 sm:grid-cols-3 justify-center items-center gap-4">
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Characteristics
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Prone to redness, irritation, or inflammation</li>
+                            <li>May feel tight or itchy</li>
+                            <li>Easily reacts to products, weather, or stress</li>
+                        </ul>
+                    </div>
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                How it feels
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Tight or uncomfortable after cleansing</li>
+                            <li>Sensitive to hot water or harsh chemicals</li>
+                            <li>Can sting, burn, or feel itchy easily</li>
+                        </ul>
+                    </div>
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Recommended care
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Use gentle, fragrance-free cleansers</li>
+                            <li>Apply lightweight, soothing moisturizers</li>
+                            <li>Avoid harsh exfoliants or scrubs</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-8">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-16">
+
+                <!-- Left: Text + Image -->
+                <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+
+                    
+                    <img src="./image/Acne Scars_ What Causes Them—and How to Treat and Prevent Them.jpg" alt=""
+                        class="w-full rounded-xl object-cover h-64 sm:h-80 md:h-96 order-1 md:order-2">
+
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                            Dry skin
+                        </h2>
+                        <p class="mt-6 text-lg leading-7 text-gray-600">
+                            Dry skin lacks sufficient natural oils and moisture, making it feel tight, rough, or flaky. It can appear dull or ashy, and fine lines may be more noticeable. This skin type is more sensitive to harsh cleansers, cold weather, and low humidity. Proper care with hydrating products and gentle routines helps restore moisture, improve texture, and maintain a healthy, smooth appearance.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Right: Features List -->
+                <div class=" grid grid-cols-1 sm:grid-cols-3 justify-center items-center gap-4">
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Characteristics
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Lacks natural oils and moisture</li>
+                            <li>Rough or flaky texture</li>
+                            <li>Dull or ashy appearance</li>
+                        </ul>
+                    </div>
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                How it feels
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Tight, especially after cleansing</li>
+                            <li>Rough or uneven to the touch</li>
+                            <li>Can feel itchy or uncomfortable</li>
+                        </ul>
+                    </div>
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Recommended care
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Use gentle, hydrating cleansers</li>
+                            <li>Apply rich moisturizers daily</li>
+                            <li>Avoid long hot showers that strip oils</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <section class="bg-white py-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-16">
+
+                <!-- Left: Text + Image -->
+                <div class="grid md:grid-cols-2 grid-cols-1 justify-between items-center gap-10">
+                    <img src="./image/Best Winter Moisturizer In India for Every Skin Type - Bodytales.jpg" alt=""
+                        class="mt-8 rounded-xl object-cover h-64 sm:h-80 md:h-96 w-full" />
+                    <div>
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                            Oily skin
+                        </h2>
+                        <p class="mt-6 text-lg leading-7 text-gray-600">
+                            Oily skin produces excess sebum, giving it a shiny or greasy appearance, especially in the T-zone (forehead, nose, and chin). This skin type is more prone to clogged pores, blackheads, and acne breakouts. While it may appear more resilient and less prone to wrinkles, oily skin still requires a proper skincare routine to balance oil production, reduce shine, and maintain clear, healthy skin.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Features List -->
+                <div class=" grid grid-cols-1 sm:grid-cols-3 justify-center items-center gap-4">
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Characteristics
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Produces excess sebum</li>
+                            <li>Shiny or greasy appearance</li>
+                            <li>Enlarged pores, especially in T-zone</li>
+                        </ul>
+                    </div>
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                How it feels
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Oily or sticky throughout the day</li>
+                            <li>May feel heavy after sweating</li>
+                            <li>Can be prone to breakouts and blemishes</li>
+                        </ul>
+                    </div>
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Recommended care
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Use gentle, foaming cleansers twice daily</li>
+                            <li>Apply oil-free or lightweight</li>
+                            <li>Use clay masks occasionally</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-8">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-16">
+
+                <!-- Left: Text + Image -->
+                <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+
+                    
+                    <img src="./image/Cuatro cosas que hago para levantarme con buena cara.jpg" alt=""
+                        class="w-full rounded-xl object-cover h-64 sm:h-80 md:h-96 order-1 md:order-2">
+
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                            Acne skin
+                        </h2>
+                        <p class="mt-6 text-lg leading-7 text-gray-600">
+                            Acne-prone skin is more susceptible to breakouts, blackheads, whiteheads, and inflamed pimples. It can be oily, combination, or even dry, but the main issue is clogged pores and excess sebum that trigger acne formation. This skin type requires gentle, non-comedogenic products, proper cleansing, and treatments that reduce inflammation and prevent further breakouts while maintaining skin balance.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Right: Features List -->
+                <div class=" grid grid-cols-1 sm:grid-cols-3 justify-center items-center gap-4">
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Characteristics
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Enlarged or clogged pores</li>
+                            <li>Redness or inflammation may occur</li>
+                            <li>Prone to pimples, blackheads, and whiteheads</li>
+                        </ul>
+                    </div>
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                How it feels
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Oily or sticky in areas prone to acne</li>
+                            <li>Can feel inflamed or tender at spots</li>
+                            <li>Sensitive to harsh products</li>
+                        </ul>
+                    </div>
+
+                    <div class="group relative grow">
+                        <h3 class="mt-3 text-lg/6 font-bold text-black/60 ">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Recommended care
+                            </a>
+                        </h3>
+                        <ul class=" mt-5 list-disc pl-6 text-sm/6 text-black/60">
+                            <li>Apply lightweight, oil-free</li>
+                            <li>Use gentle, non-comedogenic cleansers twice daily</li>
+                            <li>Use sunscreen suitable for acne-prone skin</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="w-full bg-blue-100 text-white py-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center space-y-6">
+            <p class="text-sm text-gray-700">
+                design by Yun Eychhean and Yann Sokmeng
+            </p>
+
+        </div>
+    </footer>
+
+    <script src="homeJavascript.js"></script>
+
+    <!-- Inline JS code -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const mobileMenu = document.getElementById("mobileMenu");
+            const openBtn = document.getElementById("openMenu");
+            const closeBtn = document.getElementById("closeMenu");
+
+            if (openBtn && closeBtn && mobileMenu) {
+                openBtn.onclick = () => mobileMenu.classList.remove("hidden");
+                closeBtn.onclick = () => mobileMenu.classList.add("hidden");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
+
+</html>
