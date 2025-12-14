@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natural Beauty | Product</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50 text-gray-800">
+
+<!-- Navbar -->
+<header class="bg-blue-100">
+  <nav class="flex items-center justify-between max-w-7xl mx-auto px-6 py-3">
+    <div class="w-11 h-11 rounded-lg bg-gradient-to-tr from-blue-600 to-blue-300 flex items-center justify-center font-bold text-white">
+      NB
+    </div>
+
+    <div class="hidden md:flex gap-5 text-sm font-medium">
+      <a href="#">Home</a>
+      <a href="#">Skin Type</a>
+      <a href="#">Products</a>
+      <a href="#">Cart</a>
+    </div>
+
+    <div class="flex gap-2 text-sm">
+      <a href="#" class="px-4 py-1.5 bg-indigo-600 text-white rounded-md">Log In</a>
+      <a href="#" class="px-4 py-1.5 border border-indigo-600 rounded-md">Register</a>
+    </div>
+  </nav>
+</header>
+
+<!-- Product Section -->
+<section class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-2 gap-8 bg-white mt-6 rounded-xl shadow-sm">
+
+  <!-- Image -->
+  <div class="flex justify-center items-center bg-slate-100 rounded-lg p-6">
+    <img id="productImage" src="" class="w-64 h-64 object-cover" alt="Product Image">
+  </div>
+
+  <!-- Info -->
+  <div class="flex flex-col justify-center">
+    <p id="productCategory" class="text-xs text-indigo-600 font-semibold uppercase mb-2"></p>
+    <h1 id="productName" class="text-2xl font-bold">Loading...</h1>
+
+    <p id="productDescription" class="text-sm text-gray-600 mt-2 leading-relaxed">
+      Loading product details...
+    </p>
+
+    <div class="mt-4 flex items-center gap-4">
+      <span id="productPrice" class="text-xl font-bold text-indigo-600">$0.00</span>
+      <button id="addToCartBtn" class="px-6 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition">
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="mt-4 text-xs text-gray-500">
+      Product ID: <span id="productId"></span>
+    </div>
+  </div>
+</section>
+
+<!-- Details Grid -->
+<section class="max-w-7xl mx-auto px-6 mt-6 grid md:grid-cols-2 gap-6">
+
+  <!-- Ingredients -->
+  <div class="bg-white rounded-xl p-6 shadow-sm">
+    <h2 class="text-lg font-semibold mb-3">Key Ingredients</h2>
+    <ul class="text-sm text-gray-600 space-y-2 list-disc pl-5" id="ingredientsList">
+      <li>Natural botanical extracts</li>
+      <li>Vitamins and antioxidants</li>
+      <li>Gentle, skin-friendly formulation</li>
+      <li>Dermatologist tested</li>
+    </ul>
+  </div>
+
+  <!-- Benefits -->
+  <div class="bg-white rounded-xl p-6 shadow-sm">
+    <h2 class="text-lg font-semibold mb-3">Benefits</h2>
+    <ul class="text-sm text-gray-600 space-y-2 list-disc pl-5" id="benefitsList">
+      <li>Suitable for all skin types</li>
+      <li>Gentle and effective</li>
+      <li>Visible results</li>
+      <li>Quality ingredients</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- Related -->
+<section class="max-w-7xl mx-auto px-6 mt-8 mb-10">
+  <h2 class="text-lg font-semibold mb-4">Related Products</h2>
+
+  <div id="relatedProducts" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <!-- Related products will be inserted here -->
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-10 py-4 text-center text-xs text-gray-500">
+  © 2023 Natural Beauty
+</footer>
+
+<script>
+// Product Database
+const products = {
+  cleanser: [
+    { id: "CLN001", name: "Foaming Cleanser", description: "Gentle daily cleanser for fresh skin.", price: 11.25, category: "Cleanser" },
+    { id: "CLN002", name: "Gel Cleanser", description: "Removes excess oil without drying skin.", price: 9.99, category: "Cleanser" },
+    { id: "CLN003", name: "Cream Cleanser", description: "Hydrates while cleansing sensitive skin.", price: 14.50, category: "Cleanser" },
+    { id: "CLN004", name: "Oil Cleanser", description: "Dissolves makeup and impurities gently.", price: 12.00, category: "Cleanser" },
+    { id: "CLN005", name: "Micellar Water", description: "Cleanses without rinsing, ideal for sensitive skin.", price: 8.75, category: "Cleanser" },
+    { id: "CLN006", name: "Exfoliating Cleanser", description: "Removes dead skin cells gently.", price: 17.30, category: "Cleanser" },
+    { id: "CLN007", name: "Brightening Cleanser", description: "Evens skin tone and clears dullness.", price: 13.40, category: "Cleanser" },
+    { id: "CLN008", name: "Sensitive Skin Cleanser", description: "Soothes redness and irritation.", price: 10.00, category: "Cleanser" },
+    { id: "CLN009", name: "Daily Cleanser", description: "Light cleanser for everyday use.", price: 8.00, category: "Cleanser" },
+    { id: "CLN010", name: "Charcoal Cleanser", description: "Deep cleans pores and absorbs impurities.", price: 19.99, category: "Cleanser" },
+    { id: "CLN011", name: "Hydrating Gel", description: "Refreshes skin while cleansing.", price: 15.10, category: "Cleanser" },
+    { id: "CLN012", name: "Balancing Cleanser", description: "Controls oil while removing impurities.", price: 12.80, category: "Cleanser" },
+    { id: "CLN013", name: "Creamy Foam", description: "Soft lather for smooth, clean skin.", price: 9.49, category: "Cleanser" },
+    { id: "CLN014", name: "Purifying Cleanser", description: "Removes impurities and balances skin.", price: 18.25, category: "Cleanser" },
+    { id: "CLN015", name: "Refreshing Cleanser", description: "Invigorates skin and removes dirt.", price: 14.00, category: "Cleanser" },
+    { id: "CLN016", name: "Gentle Gel", description: "Soft and soothing cleanser for all skin types.", price: 16.05, category: "Cleanser" }
+  ],
+  cream: [
+    { id: "CRM001", name: "Hydrating Cream", description: "Moisturizes dry skin deeply.", price: 12.34, category: "Cream" },
+    { id: "CRM002", name: "Anti-Aging Cream", description: "Reduces fine lines and wrinkles.", price: 19.87, category: "Cream" },
+    { id: "CRM003", name: "Night Cream", description: "Restores and nourishes overnight.", price: 8.49, category: "Cream" },
+    { id: "CRM004", name: "Day Cream", description: "Protects skin and provides moisture.", price: 15.20, category: "Cream" },
+    { id: "CRM005", name: "Whitening Cream", description: "Brightens skin and evens tone.", price: 10.75, category: "Cream" },
+    { id: "CRM006", name: "Moisturizing Cream", description: "Keeps skin soft and smooth.", price: 13.99, category: "Cream" },
+    { id: "CRM007", name: "Soothing Cream", description: "Calms irritated or sensitive skin.", price: 9.50, category: "Cream" },
+    { id: "CRM008", name: "Repair Cream", description: "Supports skin repair and recovery.", price: 17.25, category: "Cream" },
+    { id: "CRM009", name: "Brightening Night Cream", description: "Revives skin tone overnight.", price: 11.10, category: "Cream" },
+    { id: "CRM010", name: "Hydrating Gel Cream", description: "Refreshes while moisturizing.", price: 18.00, category: "Cream" },
+    { id: "CRM011", name: "Matte Finish Cream", description: "Controls shine and hydrates skin.", price: 14.45, category: "Cream" },
+    { id: "CRM012", name: "Rich Nourishing Cream", description: "Intense moisture for dry skin.", price: 16.89, category: "Cream" },
+    { id: "CRM013", name: "Collagen Cream", description: "Supports skin elasticity.", price: 8.00, category: "Cream" },
+    { id: "CRM014", name: "Sensitive Skin Cream", description: "Gentle and calming formula.", price: 19.25, category: "Cream" },
+    { id: "CRM015", name: "Night Repair Cream", description: "Supports overnight skin repair.", price: 12.00, category: "Cream" },
+    { id: "CRM016", name: "Lightweight Cream", description: "Hydrates without heaviness.", price: 9.99, category: "Cream" }
+  ],
+  eyeCare: [
+    { id: "EYE001", name: "Hydrating Eye Cream", description: "Moisturizes delicate skin.", price: 16.99, category: "Eye Care" },
+    { id: "EYE002", name: "Dark Circle Corrector", description: "Reduces puffiness and dark circles.", price: 18.50, category: "Eye Care" },
+    { id: "EYE003", name: "Anti-Aging Eye Serum", description: "Smooths fine lines around eyes.", price: 19.99, category: "Eye Care" },
+    { id: "EYE004", name: "Cooling Eye Gel", description: "Refreshes tired eyes.", price: 14.25, category: "Eye Care" },
+    { id: "EYE005", name: "Firming Eye Cream", description: "Supports skin elasticity.", price: 17.75, category: "Eye Care" },
+    { id: "EYE006", name: "Brightening Eye Cream", description: "Evens skin tone under eyes.", price: 15.50, category: "Eye Care" },
+    { id: "EYE007", name: "Night Repair Eye Cream", description: "Restores moisture overnight.", price: 19.25, category: "Eye Care" },
+    { id: "EYE008", name: "Soothing Eye Balm", description: "Calms irritation and redness.", price: 13.99, category: "Eye Care" },
+    { id: "EYE009", name: "Moisturizing Eye Gel", description: "Hydrates without heaviness.", price: 12.75, category: "Eye Care" },
+    { id: "EYE010", name: "Anti-Puffiness Cream", description: "Reduces swelling under eyes.", price: 16.50, category: "Eye Care" },
+    { id: "EYE011", name: "Revitalizing Eye Cream", description: "Refreshes and rejuvenates eyes.", price: 14.99, category: "Eye Care" },
+    { id: "EYE012", name: "Eye Lift Cream", description: "Gives a lifted appearance.", price: 18.99, category: "Eye Care" },
+    { id: "EYE013", name: "Bright Eye Serum", description: "Illuminates dark circles.", price: 17.25, category: "Eye Care" },
+    { id: "EYE014", name: "Hydrating Eye Serum", description: "Deeply moisturizes the eye area.", price: 15.99, category: "Eye Care" },
+    { id: "EYE015", name: "Soothing Eye Gel", description: "Calms puffiness and irritation.", price: 11.50, category: "Eye Care" },
+    { id: "EYE016", name: "Firm Eye Cream", description: "Tightens delicate skin around eyes.", price: 16.25, category: "Eye Care" }
+  ],
+  masks: [
+    { id: "MSK001", name: "Hydrating Face Mask", description: "Restores moisture and glow", price: 15.99, category: "Masks" },
+    { id: "MSK002", name: "Gentle Exfoliator", description: "Smooths without irritation", price: 12.49, category: "Masks" },
+    { id: "MSK003", name: "Brightening Mask", description: "Evens skin tone", price: 18.99, category: "Masks" },
+    { id: "MSK004", name: "Sugar Scrub", description: "Natural exfoliation", price: 9.99, category: "Masks" },
+    { id: "MSK005", name: "Detox Clay Mask", description: "Deep pore cleanse", price: 14.50, category: "Masks" },
+    { id: "MSK006", name: "Charcoal Exfoliator", description: "Controls oil", price: 11.99, category: "Masks" },
+    { id: "MSK007", name: "Soothing Mask", description: "Calms sensitive skin", price: 16.75, category: "Masks" },
+    { id: "MSK008", name: "Coffee Exfoliator", description: "Revives dull skin", price: 13.25, category: "Masks" },
+    { id: "MSK009", name: "Anti Aging Mask", description: "Firms skin", price: 19.99, category: "Masks" },
+    { id: "MSK010", name: "Walnut Scrub", description: "Deep polish", price: 10.50, category: "Masks" },
+    { id: "MSK011", name: "Nourishing Mask", description: "Daily skin care", price: 12.99, category: "Masks" },
+    { id: "MSK012", name: "Fruit Enzyme Scrub", description: "Gentle exfoliation", price: 17.49, category: "Masks" },
+    { id: "MSK013", name: "Purifying Mask", description: "Oil balance", price: 14.99, category: "Masks" },
+    { id: "MSK014", name: "Oatmeal Scrub", description: "Soft exfoliation", price: 11.25, category: "Masks" },
+    { id: "MSK015", name: "Cooling Mask", description: "Instant refresh", price: 13.75, category: "Masks" },
+    { id: "MSK016", name: "Sea Salt Scrub", description: "Mineral rich care", price: 8.99, category: "Masks" }
+  ],
+  moisturiser: [
+    { id: "MST001", name: "Hydrating Moisturiser", description: "Locks in moisture for soft skin.", price: 12.45, category: "Moisturiser" },
+    { id: "MST002", name: "Nourishing Cream", description: "Restores skin barrier and glow.", price: 16.00, category: "Moisturiser" },
+    { id: "MST003", name: "Mattifying Moisturiser", description: "Controls oil and shine.", price: 9.75, category: "Moisturiser" },
+    { id: "MST004", name: "Anti-Aging Cream", description: "Firms and smooths fine lines.", price: 18.20, category: "Moisturiser" },
+    { id: "MST005", name: "Brightening Moisturiser", description: "Evens skin tone.", price: 14.30, category: "Moisturiser" },
+    { id: "MST006", name: "Soothing Cream", description: "Calms sensitive skin.", price: 10.50, category: "Moisturiser" },
+    { id: "MST007", name: "SPF Moisturiser", description: "Protects while hydrating.", price: 13.00, category: "Moisturiser" },
+    { id: "MST008", name: "Night Repair Cream", description: "Repairs and nourishes overnight.", price: 17.50, category: "Moisturiser" },
+    { id: "MST009", name: "Gel Moisturiser", description: "Lightweight hydration for oily skin.", price: 11.99, category: "Moisturiser" },
+    { id: "MST010", name: "Rich Cream", description: "Intensive hydration for dry skin.", price: 19.00, category: "Moisturiser" },
+    { id: "MST011", name: "Hydro Cream", description: "Boosts skin moisture instantly.", price: 8.99, category: "Moisturiser" },
+    { id: "MST012", name: "Peptide Moisturiser", description: "Supports skin elasticity.", price: 15.25, category: "Moisturiser" },
+    { id: "MST013", name: "Vitamin C Cream", description: "Brightens dull skin.", price: 12.80, category: "Moisturiser" },
+    { id: "MST014", name: "Collagen Cream", description: "Boosts skin firmness.", price: 16.75, category: "Moisturiser" },
+    { id: "MST015", name: "Balancing Moisturiser", description: "Maintains healthy oil levels.", price: 13.60, category: "Moisturiser" },
+    { id: "MST016", name: "Repair Cream", description: "Supports skin recovery.", price: 9.49, category: "Moisturiser" }
+  ],
+  serum: [
+    { id: "SRM001", name: "Vitamin C Serum", description: "Brightens and evens skin tone.", price: 14.99, category: "Serum" },
+    { id: "SRM002", name: "Hyaluronic Serum", description: "Deep hydration for plump skin.", price: 18.50, category: "Serum" },
+    { id: "SRM003", name: "Niacinamide Serum", description: "Reduces pores and oiliness.", price: 11.20, category: "Serum" },
+    { id: "SRM004", name: "Retinol Serum", description: "Smooths fine lines and wrinkles.", price: 19.00, category: "Serum" },
+    { id: "SRM005", name: "Peptide Serum", description: "Supports skin elasticity.", price: 13.40, category: "Serum" },
+    { id: "SRM006", name: "Antioxidant Serum", description: "Protects skin from damage.", price: 12.10, category: "Serum" },
+    { id: "SRM007", name: "Collagen Serum", description: "Firms and strengthens skin.", price: 17.80, category: "Serum" },
+    { id: "SRM008", name: "Brightening Serum", description: "Reduces dullness and spots.", price: 15.00, category: "Serum" },
+    { id: "SRM009", name: "Soothing Serum", description: "Calms sensitive skin.", price: 9.99, category: "Serum" },
+    { id: "SRM010", name: "Hydrating Serum", description: "Locks in moisture effectively.", price: 10.75, category: "Serum" },
+    { id: "SRM011", name: "Firming Serum", description: "Improves skin elasticity.", price: 16.20, category: "Serum" },
+    { id: "SRM012", name: "Anti-Aging Serum", description: "Reduces wrinkles and fine lines.", price: 18.99, category: "Serum" },
+    { id: "SRM013", name: "Vitamin E Serum", description: "Repairs and protects skin.", price: 8.50, category: "Serum" },
+    { id: "SRM014", name: "Caffeine Serum", description: "Reduces puffiness and dark circles.", price: 13.75, category: "Serum" },
+    { id: "SRM015", name: "Bright Eyes Serum", description: "Revitalizes under-eye area.", price: 12.60, category: "Serum" },
+    { id: "SRM016", name: "Repair Serum", description: "Supports cell regeneration.", price: 16.00, category: "Serum" }
+  ],
+  sunscreen: [
+    { id: "SUN001", name: "SPF 50 Lotion", description: "High protection, lightweight formula.", price: 13.99, category: "Sunscreen" },
+    { id: "SUN002", name: "SPF 30 Gel", description: "Non-greasy, suitable for oily skin.", price: 11.50, category: "Sunscreen" },
+    { id: "SUN003", name: "Tinted Sunscreen", description: "Adds subtle coverage while protecting skin.", price: 16.75, category: "Sunscreen" },
+    { id: "SUN004", name: "Mineral SPF 50", description: "Zinc oxide formula for sensitive skin.", price: 19.50, category: "Sunscreen" },
+    { id: "SUN005", name: "Daily Moisturizing SPF", description: "Hydrates while blocking UV rays.", price: 12.20, category: "Sunscreen" },
+    { id: "SUN006", name: "SPF 40 Spray", description: "Quick application for face and body.", price: 10.99, category: "Sunscreen" },
+    { id: "SUN007", name: "Waterproof Sunscreen", description: "Stays on during swimming or sweating.", price: 17.00, category: "Sunscreen" },
+    { id: "SUN008", name: "SPF 15 Daily Cream", description: "Light coverage for everyday use.", price: 8.99, category: "Sunscreen" },
+    { id: "SUN009", name: "Children's Sunscreen", description: "Gentle, tear-free formula for kids.", price: 9.50, category: "Sunscreen" },
+    { id: "SUN010", name: "SPF 60 Ultra Protection", description: "Maximum sun defense for all skin types.", price: 20.00, category: "Sunscreen" },
+    { id: "SUN011", name: "SPF 50 Moisturizing Gel", description: "Hydrating formula with high protection.", price: 14.25, category: "Sunscreen" },
+    { id: "SUN012", name: "Oil-Free SPF", description: "Controls shine while protecting skin.", price: 12.80, category: "Sunscreen" },
+    { id: "SUN013", name: "SPF 30 Matte Finish", description: "Smooth, non-greasy finish.", price: 15.30, category: "Sunscreen" },
+    { id: "SUN014", name: "Tinted Mineral SPF", description: "Adds natural coverage while blocking UV.", price: 18.40, category: "Sunscreen" },
+    { id: "SUN015", name: "Hydrating SPF Mist", description: "Refreshes and protects throughout the day.", price: 11.75, category: "Sunscreen" },
+    { id: "SUN016", name: "SPF 45 Lightweight Lotion", description: "Non-sticky, all-day protection.", price: 13.25, category: "Sunscreen" }
+  ],
+  toner: [
+    { id: "TNR001", name: "Hydrating Toner", description: "Restores moisture and softness.", price: 11.00, category: "Toner" },
+    { id: "TNR002", name: "Soothing Aloe Toner", description: "Calms sensitive skin.", price: 9.25, category: "Toner" },
+    { id: "TNR003", name: "Exfoliating Toner", description: "Removes dead skin cells gently.", price: 15.50, category: "Toner" },
+    { id: "TNR004", name: "Balancing Toner", description: "Controls oil and minimizes pores.", price: 12.99, category: "Toner" },
+    { id: "TNR005", name: "Rose Water Toner", description: "Refreshes and softens skin.", price: 8.50, category: "Toner" },
+    { id: "TNR006", name: "Hydrating Mist", description: "Refreshes skin anytime.", price: 10.00, category: "Toner" },
+    { id: "TNR007", name: "Calming Toner", description: "Soothes redness and irritation.", price: 14.75, category: "Toner" },
+    { id: "TNR008", name: "Pore Minimizing Toner", description: "Refines texture and reduces shine.", price: 16.40, category: "Toner" },
+    { id: "TNR009", name: "Hyaluronic Toner", description: "Deep hydration and plumpness.", price: 17.20, category: "Toner" },
+    { id: "TNR010", name: "Astringent Toner", description: "Removes excess oil and impurities.", price: 9.80, category: "Toner" },
+    { id: "TNR011", name: "Niacinamide Toner", description: "Brightens and smooths skin.", price: 13.60, category: "Toner" },
+    { id: "TNR012", name: "Revitalizing Toner", description: "Refreshes and energizes skin.", price: 18.00, category: "Toner" }
+  ]
+};
+
+// Helper functions
+function getProductById(productId) {
+  for (const category in products) {
+    const product = products[category].find(p => p.id === productId);
+    if (product) return product;
+  }
+  return null;
+}
+
+function getAllProducts() {
+  return Object.values(products).flat();
+}
+
+function getProductsByCategory(categoryName) {
+  for (const key in products) {
+    if (products[key][0]?.category.toLowerCase() === categoryName.toLowerCase()) {
+      return products[key];
+    }
+  }
+  return [];
+}
+
+// Get product ID from URL
+function getProductIdFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('id');
+}
+
+// Load product details
+function loadProduct() {
+  const productId = getProductIdFromURL();
+  
+  if (!productId) {
+    document.getElementById('productName').textContent = 'No Product Selected';
+    document.getElementById('productDescription').textContent = 'Please select a product from the catalog.';
+    return;
+  }
+
+  const product = getProductById(productId);
+  
+  if (!product) {
+    document.getElementById('productName').textContent = 'Product Not Found';
+    document.getElementById('productDescription').textContent = 'The product you are looking for does not exist.';
+    return;
+  }
+
+  // Update page content
+  document.getElementById('productId').textContent = product.id;
+  document.getElementById('productCategory').textContent = product.category;
+  document.getElementById('productName').textContent = product.name;
+  document.getElementById('productDescription').textContent = product.description;
+  document.getElementById('productPrice').textContent = `$${product.price.toFixed(2)}`;
+  
+  // Update page title
+  document.title = `Natural Beauty | ${product.name}`;
+  
+  // Load related products
+  loadRelatedProducts(product.category, product.id);
+}
+
+// Load related products
+function loadRelatedProducts(category, currentProductId) {
+  const relatedContainer = document.getElementById('relatedProducts');
+  const categoryProducts = getProductsByCategory(category);
+  
+  // Get 4 random products from same category, excluding current product
+  const filtered = categoryProducts.filter(p => p.id !== currentProductId);
+  const shuffled = filtered.sort(() => 0.5 - Math.random());
+  const selected = shuffled.slice(0, 4);
+  
+  relatedContainer.innerHTML = selected.map(p => `
+    <a href="?id=${p.id}" class="bg-white p-4 rounded-lg text-center shadow-sm hover:shadow-md transition block">
+      <img src="" class="h-28 mx-auto mb-2 bg-slate-100 rounded">
+      <p class="text-sm font-medium">${p.name}</p>
+      <p class="text-xs text-gray-500">$${p.price.toFixed(2)}</p>
+    </a>
+  `).join('');
+}
+
+// Add to cart functionality
+document.addEventListener('DOMContentLoaded', () => {
+  loadProduct();
+  
+  document.getElementById('addToCartBtn').addEventListener('click', () => {
+    const productId = getProductIdFromURL();
+    const product = getProductById(productId);
+    if (product) {
+      alert(`Added "${product.name}" to cart!`);
+      // Here you would typically add to cart logic
+    }
+  });
+});
+</script>
+
+</body>
+</html>
